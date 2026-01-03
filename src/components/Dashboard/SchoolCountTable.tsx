@@ -3,9 +3,10 @@ type Props = {
     schoolName: string;
     schoolCode: string;
     studentCount: string;
+    schoolId:string;
   }[];
 };
-
+import Link from "next/link";
 export default function SchoolCountTable({ data }: Props) {
   return (
     <div className="bg-white rounded-xl shadow">
@@ -23,13 +24,22 @@ export default function SchoolCountTable({ data }: Props) {
         </thead>
         <tbody>
           {data.map((s) => (
-            <tr key={s.schoolCode} className="border-t">
-              <td className="p-3">{s.schoolName}</td>
+            <tr key={s.schoolId} className="border-t">
+              <td className="p-3">
+                <Link href={`/students/${s.schoolId}`}>
+                {s.schoolName}
+                </Link></td>
               <td className="p-3 text-gray-500">
+                <Link href={`/students/${s.schoolId}`}>
+                
                 {s.schoolCode}
+                </Link>
               </td>
               <td className="p-3 font-semibold">
-                {Number(s.studentCount)}
+                {/* {Number(s.studentCount)} */}
+                <Link href={`/students/${s.schoolId}`}>
+                {Number(s.studentCount)} 
+                </Link>
               </td>
             </tr>
           ))}

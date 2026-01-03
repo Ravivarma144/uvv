@@ -90,7 +90,7 @@ export default function StudentRegistrationPage() {
                 <div className="absolute inset-0 bg-black/60" />
 
                 {/* Content */}
-                <div className="relative z-10 max-w-6xl mx-auto px-4 py-14 sm:py-20 text-white">
+                <div className="relative z-10 max-w-6xl mx-auto px-4 text-white">
 
                     {/* Language Toggle */}
                     <div className="flex justify-end mb-6">
