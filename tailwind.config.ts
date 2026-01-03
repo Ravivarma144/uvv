@@ -16,10 +16,10 @@ const config: Config = {
         'testimonial-shadow2': '5.54348px 38.8043px 110.87px rgba(89,104,118,.15)',
       },
       colors: {
-        primary: "#6556ff",
-        secondary: "#1a21bc",
+        primary: "#126E07",
+        secondary: "#044D08",
         grey: "#57595f",
-        slateGray: "#f6faff",
+        slateGray: "#DCE2CA",
         deepSlate: "#d5effa",
         success: "#43c639",
         midnight_text: "#222c44",
@@ -30,6 +30,7 @@ const config: Config = {
       backgroundImage: {
         'newsletter-bg': `url('/images/newsletter/bgFile.png')`,
         'newsletter-bg-2': `url('/images/newsletter/bgFile.png')`,
+        'newsletter-bg-3' : `url('/images/newsletter/news.jpeg')`,
       },
     },
   },

@@ -50,6 +50,58 @@ const Testimonial = () => {
         ]
     };
 
+    const TestimonialData= [
+  {
+    name: "Ravi Kumar",
+    profession: "SSC Aspirant",
+    comment:
+      "The free SSC preparation courses helped me understand concepts clearly. The mentors explained everything in a simple way, and the practice sessions boosted my confidence.",
+    imgSrc: "https://randomuser.me/api/portraits/men/32.jpg",
+    // imgSrc: "/images/mentor/user3.png",
+    rating: 5,
+  },
+  {
+    name: "Anusha Reddy",
+    profession: "NEET Student",
+    comment:
+      "I come from a rural background, and this platform gave me access to quality learning at no cost. The biology and chemistry classes were extremely helpful.",
+    imgSrc: "https://randomuser.me/api/portraits/women/44.jpg",
+    rating: 5,
+  },
+  {
+    name: "Mohammed Faizan",
+    profession: "Banking Exam Candidate",
+    comment:
+      "The aptitude and reasoning courses are well-structured. Regular quizzes and guidance from volunteers made preparation much easier.",
+    imgSrc: "https://randomuser.me/api/portraits/men/54.jpg",
+    rating: 4.5,
+  },
+  {
+    name: "Sowmya Devi",
+    profession: "JEE Aspirant",
+    comment:
+      "I liked the step-by-step teaching approach. Physics concepts that felt difficult earlier became easy to understand through these free classes.",
+    imgSrc: "https://randomuser.me/api/portraits/women/65.jpg",
+    rating: 5,
+  },
+  {
+    name: "Rahul Verma",
+    profession: "UPSC Beginner",
+    comment:
+      "This platform helped me start my UPSC journey with the right guidance. The foundation courses and study materials are very useful.",
+    imgSrc: "https://randomuser.me/api/portraits/men/71.jpg",
+    rating: 4.8,
+  },
+  {
+    name: "Lakshmi Narayana",
+    profession: "Skill Development Learner",
+    comment:
+      "The computer basics and digital skills courses helped me improve my confidence and prepare for job opportunities. I am thankful for this initiative.",
+    imgSrc: "https://randomuser.me/api/portraits/men/83.jpg",
+    rating: 5,
+  },
+];
+
     const renderStars = (rating: number) => {
         const fullStars = Math.floor(rating);
         const halfStars = rating % 1 >= 0.5 ? 1 : 0;
@@ -73,7 +125,9 @@ const Testimonial = () => {
                             <div className={`bg-white rounded-2xl m-4 p-5 my-20 relative ${i % 2 ? 'shadow-testimonial-shadow2' : 'shadow-testimonial-shadow1'}`}>
                                 <div className="absolute top-[-45px]">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`}
-                                        alt={items.name} width={100} height={100} className="inline-block" />
+                                        alt={items.name} width={80} height={80} className="inline-block
+              rounded-full
+              border-2 border-deepSlate" />
                                 </div>
                                 <h4 className='text-base font-normal text-darkgray my-4'>{items.comment}</h4>
                                 <div className="flex justify-between items-center">

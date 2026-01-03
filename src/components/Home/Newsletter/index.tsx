@@ -6,22 +6,57 @@ const Newsletter = () => {
 
     return (
         <section>
-            <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+            <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 ">
                 <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8">
-                    <div className={`col-span-12 ${isProd ? 'bg-newsletter-bg-2' : 'bg-newsletter-bg'} bg-contain bg-no-repeat`}>
+                    <div className={`col-span-12 bg-gradient-to-r from-green-900/80 via-green-800/80 to-green-700/80  bg-contain bg-no-repeat`}>
                         <div className="mb-10 mt-24 lg:mx-64 lg:my-24">
                             <h3 className="text-4xl md:text-5xl text-center font-semibold text-white mb-3">Newsletter.</h3>
                             <h3 className="text-base font-normal text-white/75 text-center mb-8">
-                                Subscrible our newsletter for discounts, <br /> promo and many more.
+                                Subscriber our newsletter for More Updates , <br /> Information and many more.
                             </h3>
                             <div>
-                                <div className="relative text-white focus-within:text-white flex flex-row-reverse rounded-full pt-5 lg:pt-0">
-                                    <input type="Email address" name="q" className="py-6 lg:py-8 text-sm md:text-lg w-full mx-3 text-black rounded-full pl-8 focus:outline-none focus:text-black" placeholder="Enter your email address" autoComplete="off" />
-                                    <div className="absolute inset-y-0 right-0 flex items-center pr-6 pt-5 lg:pt-0">
-                                        <button type="submit" className="p-3 lg:p-5 focus:outline-none focus:shadow-outline bg-ultramarine hover:bg-midnightblue duration-150 ease-in-out rounded-full">
-                                            <Image src={`${getImagePrefix()}images/newsletter/send.svg`} alt="send-icon" width={30} height={30} />
-                                        </button>
-                                    </div>
+
+                                <div className="relative max-w-3xl mx-auto mt-10">
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email address"
+                                        className="
+      w-full
+      h-16 md:h-18
+      pl-8 pr-20
+      rounded-full
+      text-gray-700
+      bg-white/95
+      placeholder-gray-500
+      shadow-md
+      focus:outline-none
+      focus:ring-2 focus:ring-green-600/40
+    "
+                                    />
+
+                                    <button
+                                        type="submit"
+                                        className="
+      absolute
+      right-2
+      top-1/2
+      -translate-y-1/2
+      h-12 w-12
+      rounded-full
+      bg-green-700
+      hover:bg-green-800
+      transition
+      flex items-center justify-center
+      shadow-lg
+    "
+                                    >
+                                        <Image
+                                            src={`${getImagePrefix()}images/newsletter/send.svg`}
+                                            alt="send-icon"
+                                            width={22}
+                                            height={22}
+                                        />
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -29,6 +64,7 @@ const Newsletter = () => {
 
                 </div>
             </div>
+
         </section>
     )
 }

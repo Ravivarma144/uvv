@@ -14,10 +14,10 @@ const Hero = () => {
                                 icon="solar:verified-check-bold"
                                 className="text-success text-xl inline-block me-2"
                             />
-                            <p className='text-success text-sm font-semibold text-center lg:text-start'>Get 30% off on first enroll</p>
+                            <p className='text-success text-sm font-semibold text-center lg:text-start'>Learn Without Limits. Grow With Purpose.</p>
                         </div>
-                        <h1 className='text-midnight_text text-4xl sm:text-5xl font-semibold pt-5 lg:pt-0'>Advance your engineering skills with us.</h1>
-                        <h3 className='text-black/70 text-lg pt-5 lg:pt-0'>Build skills with our courses and mentor from world-class companies.</h3>
+                        <h1 className='text-midnight_text text-4xl sm:text-5xl font-semibold pt-5 lg:pt-0'>Skills That Move You Forward</h1>
+                        <h3 className='text-black/70 text-lg pt-5 lg:pt-0'>Advance your career through expertly designed courses, hands-on learning paths, and a community that supports your success.</h3>
                         <div className="relative rounded-full pt-5 lg:pt-0">
                             <input type="Email address" name="q" className="py-6 lg:py-8 pl-8 pr-20 text-lg w-full text-black rounded-full focus:outline-none shadow-input-shadow" placeholder="search courses..." autoComplete="off" />
                             <button className="bg-secondary p-5 rounded-full absolute right-2 top-2 ">

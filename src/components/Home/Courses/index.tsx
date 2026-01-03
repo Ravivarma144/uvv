@@ -6,10 +6,68 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { courseData } from "@/app/api/data";
+// import { courseData } from "@/app/api/data";
 import { getImagePrefix } from "@/utils/util";
 
 const Courses = () => {
+
+const courseData = [
+  {
+    heading: "UPSC Foundation – Free Guidance Program",
+    name: "UVV Learning Community",
+    imgSrc: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800",
+    students: 1250,
+    classes: 40,
+    price: 0,
+    rating: 4.8,
+  },
+  {
+    heading: "SSC & Banking Exam Preparation",
+    name: "Volunteer Mentors",
+    imgSrc: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800",
+    students: 980,
+    classes: 35,
+    price: 0,
+    rating: 4.7,
+  },
+  {
+    heading: "NEET – Biology & Chemistry Basics",
+    name: "Medical Educators Group",
+    imgSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+    students: 760,
+    classes: 28,
+    price: 0,
+    rating: 4.6,
+  },
+  {
+    heading: "JEE – Physics & Mathematics Foundation",
+    name: "Engineering Mentors",
+    imgSrc: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800",
+    students: 820,
+    classes: 32,
+    price: 0,
+    rating: 4.7,
+  },
+  {
+    heading: "Free Computer Skills for Beginners",
+    name: "Digital Literacy Team",
+    imgSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+    students: 1500,
+    classes: 20,
+    price: 0,
+    rating: 4.9,
+  },
+  {
+    heading: "Competitive Exam Aptitude Training",
+    name: "Education Volunteers",
+    imgSrc: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800",
+    students: 1100,
+    classes: 25,
+    price: 0,
+    rating: 4.5,
+  },
+];
+
 
     const settings = {
         dots: false,
@@ -70,7 +128,7 @@ const Courses = () => {
                                 <div className="relative rounded-3xl">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="course-image" width={389} height={262} className="m-auto clipPath" />
                                     <div className="absolute right-5 -bottom-2 bg-secondary rounded-full p-6">
-                                        <h3 className="text-white uppercase text-center text-sm font-medium">best <br /> seller</h3>
+                                        <h3 className="text-white uppercase text-center text-sm font-medium">Free <br /> </h3>
                                     </div>
                                 </div>
 
@@ -84,7 +142,8 @@ const Courses = () => {
                                                 {renderStars(items.rating)} {/* Dynamic stars */}
                                             </div>
                                         </div>
-                                        <h3 className="text-3xl font-medium">${items.price}</h3>
+                                        <h3 className="text-3xl font-medium">
+                                            {items.price === 0 ? "Free Course" : `₹${items.price}`}</h3>
                                     </div>
                                     <div className="flex justify-between pt-6">
                                         <div className="flex gap-4">
