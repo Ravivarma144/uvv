@@ -8,7 +8,7 @@ const Newsletter = () => {
         <section>
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 ">
                 <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8">
-                    <div className={`col-span-12 bg-gradient-to-r from-green-900/80 via-green-800/80 to-green-700/80  bg-contain bg-no-repeat border-2 border-slateGray border-primary rounded-3xl`}>
+                    <div className={`col-span-12 bg-gradient-to-r from-green-400 to-teal-600  bg-contain bg-no-repeat border-2 border-slateGray border-primary rounded-3xl`}>
                         <div className="mb-10 mt-24 lg:mx-64 lg:my-24">
                             <h3 className="text-4xl md:text-5xl text-center font-semibold text-white mb-3">Newsletter.</h3>
                             <h3 className="text-base font-normal text-white/75 text-center mb-8">
