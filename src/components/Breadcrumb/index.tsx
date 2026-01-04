@@ -8,7 +8,7 @@ interface BreadcrumbProps {
 const Breadcrumb: FC<BreadcrumbProps> = ({ links }) => {
     const lastIndex = links.length - 1;
     return (
-        <div className="flex items-baseline flex-wrap justify-center my-[0.9375rem] mx-0">
+        <div className="flex items-baseline flex-wrap  my-[0.9375rem] mx-0">
             {links.map((link, index) => (
                 <React.Fragment key={index}>
                     {index !== lastIndex ? (

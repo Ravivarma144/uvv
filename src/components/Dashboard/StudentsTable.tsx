@@ -3,6 +3,7 @@ type Props = {
     fullName: string;
     surName: string;
     phoneNumber?: string;
+    loginNumber:string;
     school: {
       name: string;
     };
@@ -23,6 +24,7 @@ export default function StudentsTable({ students }: Props) {
               <th className="p-3 text-left">Name</th>
               <th className="p-3 text-left">School</th>
               <th className="p-3 text-left">Phone</th>
+              <th className="p-3 text-left">Registration Id</th>
             </tr>
           </thead>
           <tbody>
@@ -34,6 +36,9 @@ export default function StudentsTable({ students }: Props) {
                 <td className="p-3">{s.school.name}</td>
                 <td className="p-3">
                   {s.phoneNumber || "-"}
+                </td>
+                <td className="p-3">
+                    {s.loginNumber || "-"}
                 </td>
               </tr>
             ))}
