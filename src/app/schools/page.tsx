@@ -4,6 +4,7 @@ import { fetchStudentsStats
 } from "@/lib/api/students";
 import SchoolCountTable from "../../components/Dashboard/SchoolCountTable";
 import Breadcrumb from "@/components/Breadcrumb";
+import Loader from "../../components/Common/Loader";
 
 
 type SchoolCount = {
@@ -37,9 +38,7 @@ export default function Dashboard() {
 
     if (loading) {
     return (
-      <div className="p-10 text-gray-500 text-lg">
-        Loading dashboard...
-      </div>
+      <Loader text="Loading Schools list ........" />
     );
   }
 

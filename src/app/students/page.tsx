@@ -6,17 +6,9 @@ import {
 import StudentsTable from "../../components/Dashboard/StudentsTable";
 
 import Breadcrumb from "@/components/Breadcrumb";
-
-type SchoolCount = {
-  schoolId: string;
-  schoolName: string;
-  schoolCode: string;
-  studentCount: string;
-};
+import Loader from "@/components/Common/Loader";
 
 export default function Dashboard() {
-//   const [total, setTotal] = useState(0);
-//   const [schoolCounts, setSchoolCounts] = useState([]);
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -40,15 +32,13 @@ export default function Dashboard() {
 
     if (loading) {
     return (
-      <div className="p-10 text-gray-500 text-lg">
-        Loading dashboard...
-      </div>
+     <Loader text="Loading Students list ........" />
     );
   }
 
 
   return (
-    <div className="bg-gray-100 min-h-screen pt-10 mt-10 py-4 px-4 bg-slateGray">
+    <div className="bg-gray-100 min-h-screen pt-10 mt-10  px-4 bg-slateGray">
          <h1 className="text-3xl font-bold mb-8">
         Schools List      </h1>
 

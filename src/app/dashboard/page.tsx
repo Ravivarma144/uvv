@@ -7,6 +7,8 @@ import StatCard from "@/components/Dashboard/StatCard";
 import SchoolCountTable from "../../components/Dashboard/SchoolCountTable";
 import StudentsTable from "../../components/Dashboard/StudentsTable";
 
+import Loader from "@/components/Common/Loader";
+
 type SchoolCount = {
   schoolId: string;
   schoolName: string;
@@ -36,9 +38,7 @@ export default function Dashboard() {
 
     if (loading) {
     return (
-      <div className="p-10 text-gray-500 text-lg">
-        Loading dashboard...
-      </div>
+     <Loader text="Loading dashboard ......" />
     );
   }
 

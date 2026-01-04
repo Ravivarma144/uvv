@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { fetchStudentsBySchool } from "../../../lib/api/students";
+import { fetchStudentsBySchool } from "@/lib/api/students";
+import Loader from "@/components/Common/Loader";
 
 type Student = {
   id: string;
@@ -29,7 +30,7 @@ export default function SchoolStudents() {
   }, [schoolId]);
 
   if (loading) {
-    return <div className="p-8">Loading students...</div>;
+    return <Loader text="Loading .... Student list ....." />  ;
   }
 
   return (
