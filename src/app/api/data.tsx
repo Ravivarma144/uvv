@@ -90,36 +90,42 @@ export const courseData: {
     },
   ]
 
-export const MentorData: { profession: string; name: string; imgSrc: string }[] = [
+export const MentorData: { profession: string; name: string; imgSrc: string,linkedin:string }[] = [
   {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user3.png',
+    profession: 'Motivational Speaker',
+    name: 'Ashok Mallena',
+    imgSrc: '/images/mentor/ashok.png',
+    linkedin:""
   },
   {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
+    profession: 'Motivational Speaker',
+    name: 'Vinod Kuttum',
+    imgSrc: '/images/mentor/vinod.jpeg',
+    linkedin:""
+  },
+  {
+    profession: 'Physical Development Teacher',
+    name: 'Madhu Saini',
+    imgSrc: '/images/mentor/madhu.jpeg',
+    linkedin:""
+  },
+  {
+    profession: 'Software Engineer',
+    name: 'Ravi Teppala',
+    imgSrc: '/images/mentor/ravi.jpeg',
+    linkedin:""
+  },
+  {
+    profession: 'Govt Teacher',
+    name: 'Prasad Kuttum',
     imgSrc: '/images/mentor/user2.png',
+    linkedin:""
   },
   {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
+    profession: 'Govt Teacher',
+    name: 'Prakesh Kutum',
     imgSrc: '/images/mentor/user1.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user3.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user2.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user1.png',
+    linkedin:""
   },
 ]
 
