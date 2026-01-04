@@ -60,25 +60,42 @@ export default function Dashboard() {
     mb-10">
         <>
         {/* SUMMARY STATS */}
-  <StatCard
+  {/* <StatCard
     title="Total Students"
     value={totalStudents}
     accent="blue"
     // className="col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-3"
+  /> */}
+<StatCard
+  title="Total Students"
+  value={totalStudents}
+  accent="blue"
+  bgImage="/images/dashboard/student.svg"
+  tooltip="Total enrolled students"
+  href="/students"
   />
 
   <StatCard
-    title="Total Schools"
-    value={schoolCounts.length}
-    accent="purple"
+
+  bgImage="/images/dashboard/book.svg"
+  title="Total Schools"
+  value={schoolCounts.length}
+  accent="purple"
+  tooltip="Total enrolled Schools"
+  href="/schools"
     // className="col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-3"
   />
 
   <StatCard
-    title="Active Enrollments"
     value={totalStudents}
     accent="green"
     // className="col-span-2 md:col-span-4 lg:col-span-4 xl:col-span-3"
+
+
+  bgImage="/images/dashboard/enrolled.svg"
+  title="Active Enrollments"
+  tooltip="Total enrolled Students"
+  href="/students"
   />
 
   {/* SCHOOL-WISE STATS */}
@@ -87,8 +104,12 @@ export default function Dashboard() {
       key={s.schoolId}
       title={`${s.schoolCode}`}
       value={Number(s.studentCount)}
-      accent={Number(s.studentCount) === 0 ? "gray" : "blue"}
+      accent={Number(s.studentCount) >=40 ? "green": Number(s.studentCount) >=25 ? "purple": Number(s.studentCount) === 0 ? "gray" : "blue"}
+      href={`/students/${s.schoolId}`}
     //   className="col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-2"
+
+  bgImage={encodeURI(`https://uvv-api.vercel.app/api/name-image?text=${s.schoolName}`)}
+  tooltip={s.schoolName}
     />
   ))}
         </>

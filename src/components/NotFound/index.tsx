@@ -5,7 +5,7 @@ import { getImagePrefix } from "@/utils/util";
 
 const NotFound = () => {
   return (
-    <section className="bg-white pt-8 pb-20">
+    <section className="bg-white pt-8 pb-2">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-5/12 lg:w-6/12">
@@ -63,7 +63,7 @@ const NotFound = () => {
               </p>
               <Link
                 href="/"
-                className="rounded-md px-7 py-3 text-base font-medium text-white transition hover:bg-blue-700 bg-primary"
+                className="rounded-md px-7 py-3 text-base font-medium text-white transition hover:bg-primary-500 bg-primary/90"
               >
                 Go To Home
               </Link>
