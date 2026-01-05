@@ -29,6 +29,16 @@ export async function fetchStudentsBySchool(schoolId:string) {
   return res.json();
 }
 
+export async function fetchStudentById(studentId:string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/student/${studentId}`,
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) throw new Error("Failed to load Students in school");
+  return res.json();
+}
+
 
 export async function submitStudent(data: StudentFormData) {
   const res = await fetch(

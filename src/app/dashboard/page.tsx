@@ -34,6 +34,7 @@ export default function Dashboard() {
     fetchStudents().then((data)=>{
          setStudents(data.students);
     });
+
   }, []);
 
     if (loading) {
@@ -105,7 +106,7 @@ export default function Dashboard() {
       title={`${s.schoolCode}`}
       value={Number(s.studentCount)}
       accent={Number(s.studentCount) >=40 ? "green": Number(s.studentCount) >=25 ? "purple": Number(s.studentCount) === 0 ? "gray" : "blue"}
-      href={`/students/${s.schoolId}`}
+      href={`/students/school/${s.schoolId}`}
     //   className="col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-2"
 
   bgImage={encodeURI(`https://uvv-api.vercel.app/api/name-image?text=${s.schoolName}`)}

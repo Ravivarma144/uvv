@@ -5,12 +5,15 @@ import { useParams } from "next/navigation";
 import { fetchStudentsBySchool } from "@/lib/api/students";
 import Loader from "@/components/Common/Loader";
 
+import Link from "next/link";
+
 type Student = {
   id: string;
   fullName: string;
   surName: string;
   phoneNumber?: string;
   loginNumber: string;
+  gender?: string;
 };
 
 export default function SchoolStudents() {
@@ -50,6 +53,7 @@ export default function SchoolStudents() {
               <th className="p-4 text-left">Student Name</th>
               <th className="p-4 text-left">Login ID</th>
               <th className="p-4 text-left">Phone</th>
+              <th className="p-4 text-left"></th>
             </tr>
           </thead>
 
@@ -57,13 +61,37 @@ export default function SchoolStudents() {
             {students.map((s, i) => (
               <tr key={s.id} className="border-t hover:bg-gray-50">
                 <td className="p-4">{i + 1}</td>
-                <td className="p-4 font-medium">
+                {/* <td className="p-4 font-medium">
                   {s.surName} {s.fullName}
-                </td>
+                </td> */}
+                <td className="p-3 flex items-center gap-2">
+  <span>{s.surName} {s.fullName}</span>
+
+  {s.gender === "BOY" && (
+    <span className="text-blue-600 text-lg" title="Boy">♂</span>
+  )}
+
+  {s.gender === "GIRL" && (
+    <span className="text-pink-600 text-lg" title="Girl">♀</span>
+  )}
+
+  {s.gender === "OTHER" && (
+    <span className="text-pink-600 text-lg" title="Other">⚧</span>
+  )}
+</td>
                 <td className="p-4 font-mono text-blue-600">
                   {s.loginNumber}
                 </td>
                 <td className="p-4">{s.phoneNumber || "-"}</td>
+                <td className="p-4">
+                  {/* View Details Link - Placeholder */}
+                  <Link
+                    href={`/students/admit/${s.loginNumber}`}
+                    className="text-indigo-600 hover:underline"
+                  >
+                    View Admit Card
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>

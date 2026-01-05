@@ -26,18 +26,18 @@ export default function SchoolCountTable({ data }: Props) {
           {data.map((s) => (
             <tr key={s.schoolId} className="border-t">
               <td className="p-3">
-                <Link href={`/students/${s.schoolId}`}>
+                <Link href={`/students/school/${s.schoolId}`}>
                 {s.schoolName}
                 </Link></td>
               <td className="p-3 text-gray-500">
-                <Link href={`/students/${s.schoolId}`}>
+                <Link href={`/students/school/${s.schoolId}`}>
                 
                 {s.schoolCode}
                 </Link>
               </td>
               <td className="p-3 font-semibold">
                 {/* {Number(s.studentCount)} */}
-                <Link href={`/students/${s.schoolId}`}>
+                <Link href={`/students/school/${s.schoolId}`}>
                 {Number(s.studentCount)} 
                 </Link>
               </td>
