@@ -39,6 +39,7 @@ const eventDetails = {
     if (!hallTicket) return;
 
     fetchStudentById(hallTicket).then((data) => {
+        // console.log("Fetched Student Data:", data);
       setStudent(data);
       setLoading(false);
     });
@@ -127,9 +128,9 @@ const eventDetails = {
             {/* LOGO */}
             <div className="md:col-span-2 flex justify-center md:justify-start">
               <img
-                src="/images/logo/uvv.jpeg"
+                src="/images/logo/uvv.png"
                 alt="UVV Logo"
-                className="h-16"
+                className="h-24 w-auto"
               />
             </div>
 
@@ -159,13 +160,14 @@ const eventDetails = {
             <div className="md:col-span-7 space-y-3 text-sm">
               <Field label="Name" value={`${student.fullName} ${student.surName}`} />
               <Field label="Gender" value={student.gender} />
-              <Field label="Hall Ticket No" value={student.loginNumber} mono />
+              <Field label="Hall Ticket No" value={student.rollNumber}  mono />
               <Field label="School" value={student.school.name} />
               {/* <Field label="Mandal" value={student.mandal} /> */}
             </div>
 
             {/* QR + BARCODE */}
             <div className="md:col-span-5 flex flex-col items-center gap-4">
+                <h1 className="text-lg font-bold">{student.loginNumber}</h1>
               <QRCode
                 value={`https://uvv-orcin.vercel.app/students/${student.loginNumber}`}
                 size={100}

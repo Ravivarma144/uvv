@@ -14,6 +14,7 @@ type Student = {
   phoneNumber?: string;
   loginNumber: string;
   gender?: string;
+  rollNumber?: string;
 };
 
 export default function SchoolStudents() {
@@ -50,8 +51,9 @@ export default function SchoolStudents() {
           <thead className="bg-gray-100">
             <tr>
               <th className="p-4 text-left">#</th>
+              <th className="p-4 text-left">Hall Ticket No </th>
               <th className="p-4 text-left">Student Name</th>
-              <th className="p-4 text-left">Login ID</th>
+              <th className="p-4 text-left">Registration ID</th>
               <th className="p-4 text-left">Phone</th>
               <th className="p-4 text-left"></th>
             </tr>
@@ -64,6 +66,9 @@ export default function SchoolStudents() {
                 {/* <td className="p-4 font-medium">
                   {s.surName} {s.fullName}
                 </td> */}
+                <td className="p-4 font-mono text-blue-600">
+                  {s.rollNumber}
+                </td>
                 <td className="p-3 flex items-center gap-2">
   <span>{s.surName} {s.fullName}</span>
 
