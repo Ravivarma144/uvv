@@ -117,7 +117,7 @@ export default function Dashboard() {
       </div>
 
       {/* Tables */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-3">
         <SchoolCountTable data={schoolCounts} />
         <StudentsTable students={students} />
       </div>

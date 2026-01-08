@@ -57,7 +57,7 @@ export default function StudentsTable({ students }: Props) {
       </div>
 
       {/* TABLE */}
-      <div className="overflow-auto max-h-[420px]">
+      <div className="overflow-auto max-h-[720px]">
         <table className="w-full text-sm border-collapse">
           
           <thead className="bg-gray-100 sticky top-0 z-10">

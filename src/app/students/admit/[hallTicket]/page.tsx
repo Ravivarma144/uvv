@@ -16,17 +16,7 @@ export default function AdmitCardPage() {
   const [student, setStudent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
-  // 🔹 Mock student (replace with API later)
-//   const student = {
-//     name: "AMBATI NANDU",
-//     gender: "BOY",
-//     school: "ZP High School",
-//     mandal: "VAJRAPU KOTHURU",
-//     hallTicket: hallTicket ?? "ABCDEFGH",
-//     exam: "UVV Talent Test – 2026",
-//     place: "Boddapadu, Palasa Mandal",
-//     date: "10 January 2026",
-//   };
+ 
 
 const eventDetails = {
     exam: "UVV Talent Test – 2026",
@@ -161,7 +151,7 @@ const eventDetails = {
               <Field label="Name" value={`${student.fullName} ${student.surName}`} />
               <Field label="Gender" value={student.gender} />
               <Field label="Hall Ticket No" value={student.rollNumber}  mono />
-              <Field label="School" value={student.school.name} />
+              <Field label="School" value={`${student.school.name} , ${student.school.address}`} />
               {/* <Field label="Mandal" value={student.mandal} /> */}
             </div>
 
